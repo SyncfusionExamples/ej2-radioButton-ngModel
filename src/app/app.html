@@ -1,0 +1,6 @@
+<form action="" #form="ngForm" (ngSubmit)="logForm(form.value)">
+    <ej-radiobutton label="Male" name="gender" [value]="male" [(ngModel)]="gender"></ej-radiobutton>
+    <ej-radiobutton label="Female" name="gender" [value]="female" [(ngModel)]="gender"></ej-radiobutton>    
+    <p>Form value: {{ form.value | json }}</p>
+    <p>Gender Value: {{ gender }}</p>
+</form>
