@@ -13,10 +13,12 @@ Public gender:string = 'male';
 The corresponding selected option's value updated in paragraph element using ngModel.
 
 ```HTML
-<ej-radiobutton label="Male" name="gender" [value]="male" [(ngModel)]="gender"></ej-radiobutton>
-<ej-radiobutton label="Female" name="gender" [value]="female" [(ngModel)]="gender"></ej-radiobutton>
-<p>Form value: {{ form.value | json }}</p>
-<p>Gender Value: {{ gender }}</p>
+<form action="" #form="ngForm" (ngSubmit)="logForm(form.value)">
+    <ejs-radiobutton label="Male" name="gender" [value]="male" [(ngModel)]="gender"></ejs-radiobutton>
+    <ejs-radiobutton label="Female" name="gender" [value]="female" [(ngModel)]="gender"></ejs-radiobutton>
+    <p>Form value: {{ form.value | json }}</p>
+    <p>Gender Value: {{ gender }}</p>
+</form>
 ```
 
 ## Installing and Running Application
